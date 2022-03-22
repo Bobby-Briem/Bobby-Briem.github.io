@@ -1,0 +1,444 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+
+
+
+/*
+    ========================
+    Universal Styles
+    ========================
+*/
+
+html {
+    font-size: 16px;
+    
+}
+
+body {
+    background-color: #f2f2f2;
+}
+
+h2 {
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 1.75rem;
+}
+
+h3 {
+    font-family: 'Montserrat';
+    font-weight: 300;
+    font-size: 1.25rem;
+}
+
+h4 {
+    font-family: 'Montserrat';
+    font-weight: 300;
+    font-size: 1.125rem;
+}
+
+h5 {
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+p {
+    font-family: 'Lato';
+    font-weight: 400;
+    font-size: 1rem;
+}
+a {
+    text-decoration: none;
+}
+
+a:active {
+    color: white;
+}
+
+a:visited {
+    color: white;
+}
+
+strong {
+    font-weight: 700;
+}
+
+.grid-container {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    align-items: center;
+
+}
+/*
+    ========================
+    Header Styles
+    ========================
+*/
+
+.main-container {
+    display: flex;
+    position: absolute;
+    height: 4.25rem;
+    /*background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(103,103,103,1) 50%, rgba(25,25,25,1) 100%);*/
+    width:100%;
+    justify-content: space-between;
+    z-index: 100;
+}
+ 
+.logo img {
+    max-width: 12rem;
+    width: auto;
+    padding: .5rem 1rem;
+}
+.main-container nav {
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+}
+
+.btn {
+    padding: 0 .5rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.btn:last-of-type {
+    margin-right: .5rem;
+}
+
+/*.btn:hover {
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(187,0,0,1) 50%, rgba(0,0,0,1) 100%);
+}*/
+
+.btn h3 {
+    color: white;
+}
+
+.btn h3:hover {
+    color: gray;
+}
+
+/*
+    ========================
+    banner styles
+    ========================
+*/
+
+#contact {
+    display: flex;
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    height: 30rem;
+    background-image: url("./images/thePyramids.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-bottom: 1px solid black;
+}
+
+.box {
+    display: flex;
+    position: absolute;
+    top: 8rem;
+    left: 1rem;
+    width: 15rem;
+    height: 10rem;
+    z-index: 3;
+    background-image: url("./images/sandstone.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border: 1px solid gray;
+    justify-content: center;
+}
+
+.box h2 {
+    text-transform: uppercase;
+    line-height: 1.4;
+    font-weight: 700;
+}
+
+
+/*
+    ========================
+    Grid styles
+    ========================
+*/
+.grid-desc ul {
+    list-style-type: square;
+}
+
+.grid-desc li {
+    margin-left: 4%
+}
+
+.grid-img {
+    align-content:center;
+    max-width: 320px;
+    display: flex;
+}
+
+.grid-img img{
+    object-fit: contain;
+    max-width:320px;
+    max-height: 240px;
+}
+
+.grid-desc {
+    padding-bottom: 2%;
+    padding-left: 1%;
+}
+
+.grid-desc h3  {
+    line-height: 1.4;
+    padding-top: 2%;
+}
+
+.grid-desc > p {
+    margin: 2% 0;
+}
+
+
+.public-img {
+    grid-area: 2 / 2 / 3 / span 1;
+
+}
+
+.public-desc {
+    grid-area: 2 / 3 / 3 / span 3;
+}
+
+.outdoor-img {
+    grid-area: 3 / 2 / 4 / span 1;
+}
+
+.outdoor-desc {
+    grid-area: 3 / 3 / 4 / span 3;
+}
+
+.emergency-img {
+    grid-area: 4 / 2 / 5 / span 1;
+}
+
+.emergency-desc {
+    grid-area: 4 / 3 / 5 / span 3;
+}
+
+.airport-img {
+    grid-area: 5 / 2 / 6 / span 1;
+}
+
+.airport-desc {
+    grid-area: 5 / 3 / 6 / span 3;
+}
+
+.prison-img {
+    grid-area: 6 / 2 / 7 / span 1;
+}
+
+.prison-desc {
+    grid-area: 6 / 3 / 7 / span 3;
+}
+
+.custom-img {
+    grid-area: 7 / 2 / 8 / span 1;
+}
+
+.custom-desc {
+    grid-area: 7 / 3 / 8 / span 3;
+}
+
+.parts-img {
+    grid-area: 8 / 2 / 9 / span 1;
+}
+
+.parts-desc {
+    grid-area: 8 / 3 / 9 / span 3;
+}
+
+.enclosure-img {
+    grid-area: 9 / 2 / 10 / span 1;
+}
+
+.enclosure-desc {
+    grid-area: 9 / 3 / 10 / span 3;
+}
+
+.security-img {
+    grid-area: 10 / 2 / 11 / span 1;
+}
+
+.security-desc {
+    grid-area: 10 / 3 / 11 / span 3;
+}
+
+.social {
+    grid-area: 1 / 6 / span 2 / span 1;
+    display: flex;
+    justify-content: center;
+    align-items:flex-start;
+    height: 100%;
+    background-color: #262626;   
+    flex-wrap: wrap;
+    flex-direction: row;
+    height: 100%;
+}
+
+.product {
+    grid-area: 3 / 6 / span 9 / span 1;
+    background-color: #262626;
+    height: 100%;
+}
+
+/*
+    =========================
+    info and mission statement styles
+    =========================
+*/
+
+.info {
+    grid-area: 1 / 1 / 13 / 2;
+    align-self: flex-start;
+    background-color: #262626;
+    height: 100%;
+    color:#f2f2f2;
+}
+
+
+
+.statement {
+    grid-area: 1 / 2 / 2 / span 4;
+    align-self: flex-start;
+    padding: 2.5%;
+
+}
+
+.info h2 {
+    margin: 5%;
+    text-align: center;
+    color: white;
+}
+
+
+.info h2,
+.statement h2 {
+    padding: 1% 0;
+    font-weight: 300;
+}
+
+.statement p {
+    line-height: 1.4;
+}
+
+.statement h2,
+.statement p {
+    text-align: center;
+}
+
+/* 
+    =========================
+    Side Navigation Styles
+    =========================
+*/
+
+.sidenav {
+    padding: 3%;
+    border-bottom: 3px solid #f2f2f2;
+
+}
+
+.sidenav:first-of-type {
+    border-top: 3px solid #f2f2f2;
+}
+
+.sidenav:hover {
+    background-color: #404040;
+}
+
+/* 
+    ======================
+    Social Media Link Styles
+    ======================
+*/
+
+.social > a {
+    padding: 3%;
+    margin-top: 5%;
+}
+
+.social h3 {
+    width: 100%;
+    color:#f2f2f2;
+}
+
+.sidebar-right {
+    width: 100%;
+}
+.social h2 {
+    width: 100%;
+    text-align: center;
+    color:#f2f2f2;
+    font-weight: 300;
+}
+.social ul {
+    width: 100%;
+}
+
+.social li {
+    text-align: center;
+}
+
