@@ -47,6 +47,11 @@ table {
 	border-spacing: 0;
 }
 
+a {
+    color: inherit; 
+}
+
+
 
 
 /*
@@ -93,9 +98,7 @@ p {
     font-weight: 400;
     font-size: 1rem;
 }
-
 a {
-    color: white;
     text-decoration: none;
 }
 
@@ -425,6 +428,7 @@ strong {
 .social > a {
     padding: 3%;
     margin-top: 5%;
+    color: white;
 }
 
 .social h3 {
@@ -448,4 +452,5 @@ strong {
 .social li {
     text-align: center;
 }
+
 
