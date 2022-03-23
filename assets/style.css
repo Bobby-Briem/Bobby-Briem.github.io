@@ -126,7 +126,7 @@ strong {
     display: grid;
     width: 100%;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(12, 1fr);
+    grid-template-rows: repeat(8, 1fr);
     align-items: center;
 
 }
@@ -320,7 +320,7 @@ strong {
     grid-area: 8 / 3 / 9 / span 3;
 }
 
-.enclosure-img {
+/*.enclosure-img {
     grid-area: 9 / 2 / 10 / span 1;
 }
 
@@ -335,7 +335,7 @@ strong {
 .security-desc {
     grid-area: 10 / 3 / 11 / span 3;
 }
-
+*/
 .social {
     grid-area: 1 / 6 / span 2 / span 1;
     display: flex;
